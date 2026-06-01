@@ -17,11 +17,17 @@ class GameHero {
         It should take no parameters. Inside, add 25 to 'this.health' and return 
         a template literal string stating: "[name] drinks a potion and heals! Health: [health]"
     */
+	drinkPotion() {
+			this.health += 25
+			return `${this.name} drinks a potion and heals! Health: ${this.health}.`
+		}
 }
 
 const champion = new GameHero("Arthur");
 
 // TODO: Test your newly engineered action and print the result.
+
+console.log(champion.drinkPotion());
 
 /** EXERCISE 2: CLEANING UP THE MEMORY TRAP **/
 
@@ -30,10 +36,10 @@ class EnemyOrc {
 		this.name = orcName;
 		this.rageMeter = 0;
 		// POOR ARCHITECTURE: This function gets copied into memory over and over!
-		this.gainRage = () => {
+		}
+		gainRage = () => {
 			this.rageMeter += 20;
 			return `${this.name} growls! Rage increased to ${this.rageMeter}.`;
-		};
 	}
 
 	/*
