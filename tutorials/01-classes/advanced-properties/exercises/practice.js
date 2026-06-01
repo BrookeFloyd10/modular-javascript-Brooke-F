@@ -14,12 +14,25 @@
     3. Inside the constructor, hardcode a default property: 'this.speedMultiplier' set to 1.5.
 */
 
+class GameMount {
+    constructor(animalType = "Horse") {
+        this.animal = animalType;
+        this.speedMultiplier = 1.5;
+
+    }
+}
+
 /*
     TODO: Instantiate two mounts to test your defaults:
     1. Create 'basicMount' without passing any arguments.
     2. Create 'epicMount' and pass it the string "Dragon".
     Log both to see how the optional parameter behaves.
 */
+const basicMount = new GameMount();
+const epicMount = new GameMount("Dragon");
+
+console.log(`Basic Mount called: ${basicMount.animal}! Speed bonus: x${basicMount.speedMultiplier} kph.`);
+console.log(`Special Mount called: ${epicMount.animal}, Speed bonus: x${epicMount.speedMultiplier} kph. `);
 
 /** EXERCISE 2: REPAIRING THE SHIELD BLUEPRINT **/
 
@@ -29,10 +42,10 @@
     while an element can be specified, if it is omitted, the default value is "Fire".
 */
 class MagicShield {
-	constructor(shieldName, element, durability) {
+	constructor(shieldName, element = "Fire") {
 		this.name = shieldName;
 		this.protectionElement = element;
-		this.durability = durability;
+		this.durability = 100;
 	}
 }
 
@@ -40,3 +53,8 @@ class MagicShield {
     TODO: Test the repaired class. Create a shield named "Aegis" but do not pass an 
     element parameter. Log a statement that describes the shield to the player.
 */
+
+const shield = new MagicShield("Aegis");
+
+console.log(`\n---- New Shield Aquired ----`)
+console.log(`New item: ${shield.name}\nProtection Element: ${shield.protectionElement}\nShield Durability: ${shield.durability}/100.`);
