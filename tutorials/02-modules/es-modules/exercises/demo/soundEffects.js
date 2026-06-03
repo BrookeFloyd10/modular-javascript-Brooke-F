@@ -1,9 +1,10 @@
 // DEMO: Attach the export keyword directly to each declaration
 // to make them available elsewhere
 
-const coinSound = "🔊 *Clink!* Gold added.";
-const damageSound = "💥 *Ouch!* Hit taken.";
 
-function playLaser() {
+export const coinSound = "🔊 *Clink!* Gold added.";
+export const damageSound = "💥 *Ouch!* Hit taken.";
+
+export function playLaser() {
 	return "⚡ *Pew! Pew!* Laser fired.";
 }
