@@ -4,6 +4,7 @@
     Practice using CommonJS syntax to isolate settings data matrices 
     and import them cleanly into an entry point file.
 */
+const config = require("./settings.js");
 
 /** EXERCISE: REPAIRING THE EXPORT COUPLING **/
 
@@ -14,5 +15,5 @@
     in the log statements with the correct references.
 */
 
-console.log(`Welcome to ${null}!`);
-console.log(`Maximum allowed team size: ${null} players.`);
+console.log(`Welcome to ${config.gameTitle}!`);
+console.log(`Maximum allowed team size: ${config.maxPartySize} players.`);
