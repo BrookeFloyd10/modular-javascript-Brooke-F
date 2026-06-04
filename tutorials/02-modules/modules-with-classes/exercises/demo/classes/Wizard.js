@@ -1,7 +1,7 @@
 // We can import utility helpers directly into our specialized class files!
 import { getRandominRange } from "../utils/mathUtils.js";
 
-// Export the class blueprint directly
+// Export the class blueprint directly....using default to avoid destructing
 export default class Wizard {
 	constructor(name) {
 		this.name = name;
