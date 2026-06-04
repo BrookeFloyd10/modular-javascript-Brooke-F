@@ -23,7 +23,6 @@
 import chalk from "chalk";
 import gradient from "gradient-string";
 
-
 /*
     TODO: Use 'gradient-string' to style a victory banner string.
     1. Create a variable named 'goldGradient' by passing the colors "yellow" and "orange" into the gradient tool.
